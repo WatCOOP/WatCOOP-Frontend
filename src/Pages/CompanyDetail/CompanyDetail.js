@@ -168,7 +168,7 @@ export default function CompanyDetail() {
                 <Link
                   fontSizxe="sm"
                   style={{ textDecoration: 'none' }}
-                  href={`http://localhost:3000/review/${review._id}`}
+                  href={`https://watcooop.web.app/review/${review._id}`}
                   color={'#9A851B'}
                   fontWeight="bold"
                   fontSize={'xl'}
