@@ -58,7 +58,7 @@ export default function WithSubnavigation() {
             fontFamily={'heading'}
             fontSize='xl'
             my={'auto'}
-            href={'/'}
+            href={'http://localhost:3000/'}
             color={'#9A851B'}>
             WatCOOP
           </Link>
@@ -159,7 +159,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Link
       href={href}
@@ -206,7 +206,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
+const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -264,13 +264,13 @@ interface NavItem {
   href?: string;
 }
 
-const NAV_ITEMS: Array<NavItem> = [
+const NAV_ITEMS = [
   {
     label: 'View Reviews',
-    href: 'reviews',
+    href: 'https://watcooop.web.app/reviews',
   },
   {
     label: 'Make a Review',
-    href: 'create-review',
+    href: 'https://watcooop.web.app/create-review',
   },
 ];

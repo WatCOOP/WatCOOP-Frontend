@@ -120,15 +120,15 @@ export default function CompanyDetail() {
               <Stack direction={'column'} width={'100%'} color="white">
                 <Stack direction="row" alignItems="center" ml={5} width="100%">
                   <Text fontSize="sm">
-                    Length of Reviews: {lengthOfReviews}
+                    Number of Reviews: {lengthOfReviews} |
                   </Text>
                   <Text fontSize="sm">
-                    Average Oppertunities To Learn:{' '}
-                    {averageOpportunitiesToLearn}
+                    Average Oppertunities To Learn Rating:{' '} 
+                    {averageOpportunitiesToLearn} |
                   </Text>
                   <Text fontSize="sm">
-                    Average Oppertunities To Network:{' '}
-                    {averageOpportunitiesToNetwork}
+                    Average Oppertunities To Network Rating:{' '}
+                    {averageOpportunitiesToNetwork} |
                   </Text>
                   <Text fontSize="sm">Average Salary: {averageSalary}</Text>
                 </Stack>
@@ -139,13 +139,13 @@ export default function CompanyDetail() {
           {/* Avaliablity of help */}
           <Stack direction={'column'} color={'white'}>
             <Stack direction="row" alignItems="center" ml={5}>
-              <Text fontSize="sm">Length of Reviews: {lengthOfReviews}</Text>
+              <Text fontSize="sm">Length of Reviews: {lengthOfReviews} |</Text>
               <Text fontSize="sm">
-                Average Oppertunities To Learn: {averageOpportunitiesToLearn}
+                Average Oppertunities To Learn: {averageOpportunitiesToLearn} |
               </Text>
               <Text fontSize="sm">
                 Average Oppertunities To Network:{' '}
-                {averageOpportunitiesToNetwork}
+                {averageOpportunitiesToNetwork} |
               </Text>
             </Stack>
           </Stack>

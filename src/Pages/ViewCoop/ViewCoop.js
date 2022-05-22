@@ -65,7 +65,7 @@ export default function ViewCoop() {
                 type="text"
                 width={'55%'}
                 bg={'white'}
-                placeholder="Search Companies"
+                placeholder="Apple..."
                 onChange={(e) => setSearchValue(e.target.value)}
                 mr={3}
               />
