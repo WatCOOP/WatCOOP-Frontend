@@ -30,6 +30,8 @@ function App() {
           <Route path="/create-review" element={<Review />} />
           
           <Route path="/review/:id" element={<CompanyDetail />} />
+          <Route path="/company/:id" element={<CompanyDetail />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

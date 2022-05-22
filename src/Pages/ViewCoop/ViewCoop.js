@@ -53,21 +53,6 @@ export default function ViewCoop() {
     console.log(searchResults);
   }
 
-  // useEffect(() => {
-  //   // fetch GET request to https://watcoop.herokuapp.com/reviews/searchValue
-  //   var requestOptions = {
-  //     method: 'GET',
-  //     redirect: 'follow'
-  //   };
-    
-  //   fetch("https://watcoop.herokuapp.com/reviews/Scha", requestOptions)
-  //     .then(response => response.text())
-  //     .then(result => setSearchResults(result))
-  //     .catch(error => console.log('error', error));
-
-  // });
-  
-
 
   return (
     <Stack bg={'black'} minH={'90vh'} direction={{ base: 'column', md: 'row' }}>
@@ -128,7 +113,7 @@ export default function ViewCoop() {
                     <Link
                       fontSizxe="sm"
                       style={{ textDecoration: 'none' }}
-                      href={`/company/${result.companyName}-${result.jobTitle}`}
+                      href={`/company/${result._id}`}
                       color={'#9A851B'}
                       fontWeight="bold"
                       fontSize={'xl'}
