@@ -127,8 +127,9 @@ export default function HookForm() {
             </FormLabel>
             <Input
               color="white"
+              type="number"
               id="experience"
-              placeholder="Salary"
+              placeholder="Enter the Salary"
               {...register('salary', {
                 required: 'This is required',
               })}

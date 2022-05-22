@@ -113,13 +113,13 @@ export default function ViewCoop() {
                     <Link
                       fontSizxe="sm"
                       style={{ textDecoration: 'none' }}
-                      href={`/company/${result._id}`}
+                      href={`/company/${result.companyName}--${result.jobTitle}`}
                       color={'#9A851B'}
                       fontWeight="bold"
                       fontSize={'xl'}
                       ml="2"
                     >
-                      {result.company} - {result.jobTitle}
+                      {result.companyName} - {result.jobTitle}
                     </Link>
 
                     <Stack direction="row" alignItems="center" ml={5}>

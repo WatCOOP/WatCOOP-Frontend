@@ -25,10 +25,34 @@ import {
   
   
   export default function ReviewDetail() {  
-    // get id from URL
     const { id } = useParams();
 
-    console.log(id)
+    // states
+    const [loading, setLoading] = useState(true);
+    const [review, setReview] = useState([]);
+  
+    // on mount
+    useEffect(() => {
+      const url = 'https://watcoop.herokuapp.com/reviews/id/' + id;
+  
+      // fetch GET request to url
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(response => response.text())
+        .then(result => {
+          let data = JSON.parse(result);
+          setCompany(data);
+          console.log(data);
+        })
+        .catch(error => console.error('error', error));
+  
+      setLoading(false);
+      console.log(company);
+    }, []);
     
     
     return (
