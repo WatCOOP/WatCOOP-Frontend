@@ -58,7 +58,7 @@ export default function WithSubnavigation() {
             fontFamily={'heading'}
             fontSize='xl'
             my={'auto'}
-            href={'http://localhost:3000/'}
+            href={'https://watcooop.web.app/'}
             color={'#9A851B'}>
             WatCOOP
           </Link>

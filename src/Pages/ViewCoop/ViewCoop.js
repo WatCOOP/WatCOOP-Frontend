@@ -30,8 +30,37 @@ export default function ViewCoop() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const [searchValue, setSearchValue] = useState(null);
+  const [searchValue, setSearchValue] = useState(' ');
   const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    var axios = require('axios');
+
+    var config = {
+      method: 'get',
+      url: `https://watcoop.herokuapp.com/reviews/ `,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    axios(config)
+      .then(function (response) {
+        //   let data = JSON.parse(result);
+        setSearchResults(response.data);
+        console.log(response.data);
+
+      })
+      .catch(function (error) {
+        console.log(error);
+    });
+
+
+    console.log(searchResults);
+    
+    setLoading(false);
+}, []);
 
 
   function onSubmit(values) {
@@ -105,7 +134,7 @@ export default function ViewCoop() {
                   borderRadius="sm"
                 >
                   <Stack direction="row" height="100%" alignItems="center">
-                    <Image src={result.logo} width="10" alt="Apple" />
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="10" alt="Apple" />
                   </Stack>
 
                   <Stack direction={'column'}>
