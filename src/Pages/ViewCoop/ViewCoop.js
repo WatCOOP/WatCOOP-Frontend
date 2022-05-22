@@ -43,13 +43,14 @@ export default function ViewCoop() {
         'Content-Type': 'application/json',
       },
     }).then(response => response.text())
-      .then(result => {
-        setSearchResults(result);
-        console.log(searchResults);
-
+      .then(result => { 
+        let data = JSON.parse(result);
+        console.log(data);
+        setSearchResults(data); 
       })
       .catch(error => console.error('error', error));
-
+      
+    console.log(searchResults);
   }
 
   // useEffect(() => {
@@ -110,7 +111,7 @@ export default function ViewCoop() {
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <SimpleGrid columns={1} width={'100%'} spacingY="10px">
               {/* map searchResults */}
-              {searchResults.length ? <div></div> : searchResults.map((result, index) => (
+              {searchResults.map((result, index) => (
                 <Stack
                   direction={['column', 'row']}
                   p="4"
@@ -127,13 +128,13 @@ export default function ViewCoop() {
                     <Link
                       fontSizxe="sm"
                       style={{ textDecoration: 'none' }}
-                      href={`/company/${result.company}`}
+                      href={`/company/${result.companyName}-${result.jobTitle}`}
                       color={'#9A851B'}
                       fontWeight="bold"
                       fontSize={'xl'}
                       ml="2"
                     >
-                      {result.company} - {result.position}
+                      {result.company} - {result.jobTitle}
                     </Link>
 
                     <Stack direction="row" alignItems="center" ml={5}>
