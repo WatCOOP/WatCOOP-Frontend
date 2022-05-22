@@ -168,7 +168,7 @@ export default function CompanyDetail() {
                 <Link
                   fontSizxe="sm"
                   style={{ textDecoration: 'none' }}
-                  href={`http://localhost:3000/review/${id}`}
+                  href={`http://localhost:3000/review/${review._id}`}
                   color={'#9A851B'}
                   fontWeight="bold"
                   fontSize={'xl'}

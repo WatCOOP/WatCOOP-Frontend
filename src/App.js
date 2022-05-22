@@ -16,6 +16,7 @@ import Review from './Pages/Review/Review';
 import Landing from './Pages/Landing/Landing';
 import ViewCoop from './Pages/ViewCoop/ViewCoop';
 import CompanyDetail from './Pages/CompanyDetail/CompanyDetail';
+import ReviewDetail from './Pages/ReviewDetail/ReviewDetail';
 
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
@@ -29,7 +30,7 @@ function App() {
           <Route path="/reviews" element={<ViewCoop />} />
           <Route path="/create-review" element={<Review />} />
           
-          <Route path="/review/:id" element={<CompanyDetail />} />
+          <Route path="/review/:id" element={<ReviewDetail />} />
           <Route path="/company/:id" element={<CompanyDetail />} />
 
         </Routes>
